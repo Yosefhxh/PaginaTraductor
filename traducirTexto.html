@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor Señas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">   
+            <img src="/images/lenguaje-de-senas (1).png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="traductor.html" class="active">Traductor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de contenido principal -->
+        <section class="translator">
+            <h2>Sección de Traducción de texto a señas</h2>
+
+            <!-- Campo de entrada de texto -->
+            <div class="text-input">
+                <label for="text">Introduce el texto:</label>
+                <input type="text" id="text" placeholder="Escribe aquí...">
+                <button id="translate-btn">Traducir</button>
+            </div>
+
+            <!-- Área donde se mostrarán las imágenes de las letras -->
+            <div id="output" class="translation-output"></div>
+
+            <!-- Botón para regresar al traductor -->
+            <div class="back-to-translator">
+                <a href="traductor.html" class="back-button">Regresar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="social-icons">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Función para traducir texto a imágenes
+        document.getElementById('translate-btn').addEventListener('click', function() {
+            const inputText = document.getElementById('text').value.toUpperCase(); // Convertir texto a mayúsculas
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Limpiar cualquier traducción anterior
+
+            // Iterar sobre cada letra del texto
+            for (let i = 0; i < inputText.length; i++) {
+                let char = inputText[i];
+                if (char >= 'A' && char <= 'Z') {
+                    // Crear una imagen para cada letra
+                    const img = document.createElement('img');
+                    img.src = `/images/señas/${char}.png`; // Asume que las imágenes están nombradas como A.png, B.png, etc.
+                    img.alt = char;
+                    outputDiv.appendChild(img);
+                } else if (char === ' ') {
+                    // Crear un espacio entre palabras
+                    const space = document.createElement('span');
+                    space.style.display = 'inline-block'; // Usar inline-block para dar espacio entre imágenes
+                    space.style.width = '20px'; // Ajustar el ancho del espacio según sea necesario
+                    outputDiv.appendChild(space);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
