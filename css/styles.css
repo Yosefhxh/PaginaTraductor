@@ -294,6 +294,184 @@ a:hover {
     height: 50px;
 }
 
+/*Estilos para la seccion de "nosotros"*/
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 60px;
+    
+
+   
+}
+.about p{
+    font-size: 20px;
+    color: #555;
+    text-align: justify;
+    font-family: 'Serif', sans-serif;
+
+}
+
+/*Sobre los integrantes*/
+
+.presentacion {
+    display: flex;
+    flex-direction: row; /* Cambiado a 'row' para alinear en fila */
+    border-radius: 15px;
+    text-align: left;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    font-family: 'Serif', sans-serif;
+    width: 1200px;
+    text-align: justify;
+    padding: 5%;
+    color: #555;
+}
+
+.presentacion__foto {
+    max-width: 150px;
+    order: 1; /* Asegura que la foto quede a la izquierda */
+}
+
+.presentacion__contenedor {
+    order: 2; /* Asegura que el contenedor de texto quede a la derecha */
+    
+}
+
+.presentacion__titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    
+   
+}
+
+.redes {
+    display: flex;
+    justify-content: flex-start; /* Alinea a la izquierda */
+    gap: 1rem; /* Espacio entre los íconos */
+    margin-top: 1rem;
+    list-style: none; /* Quita los puntos de la lista */
+}
+
+/*Aprender mas*/
+/* abecedario*/
+.titulo_abecedario{
+    font-size: 35px;
+    color: #555;
+    font-family: 'Serif', sans-serif;
+    margin-bottom: 20px;
+    margin: 30px;
+}
+
+.abecedario-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columnas de igual tamaño */
+    gap: 40px; /* Incrementa el espacio entre cada imagen */
+    justify-items: center; /* Centra el contenido en cada celda */
+}
+.letra-container {
+    text-align: center;
+    width: 100%;
+}
+.letra-container img {
+    width: 200px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+/*Contacto*/
+.contacto {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F0DE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.contact-form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form-container h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-form-container p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.submit-button {
+    background-color: #A89981;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
 
 
 
